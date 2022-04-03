@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Acquire</title>
+    <link rel="canonical" href="https://getbootstrap.com/docs/4.0/examples/album/">
+    <link rel="icon" href="/docs/4.0/assets/img/favicons/favicon.ico">
+    <link href="{% static 'index/css/bootstrap.min.css' %}" rel="stylesheet">
+    <link href="{% static 'index/css/album.css' %}" rel="stylesheet">
+    <style>
+      .card-text {
+  color: #000000;
+  text-decoration: none;
+}
+
+    .card-img-top {
+    height: 230px;
+    width: 100%;
+}
+    </style>
+
+  </head>
+  <body>
+
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="#">
+    <img src="{% static 'index/img/logo.svg' %}" width="30" height="30" class="d-inline-block align-top" alt="">
+    Acquire
+  </a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav">
+      <li class="nav-item active">
+        <a class="nav-link" href="index">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link" href="{% url 'profile' request.user %}">Profile <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link" href="favorites">Favorites <span class="sr-only">(current)</span></a>
+      </li>
+       <li class="nav-item active">
+        <a class="nav-link" href="/">Logout <span class="sr-only">(current)</span></a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+
+
+  <section class="section">
+    <div class="container">
+    </div>
+  </section>
+
+
+
+    <main role="main">
+
+      <section class="jumbotron text-center">
+        <div class="container">
+          <h1 class="jumbotron-heading">Acquire</h1>
+          <p class="lead text-muted">The most beautiful and affordable properties in your surroundings. Our software makes it really easy for you to finance your first piece of real estate.</p>
+
+        </div>
+      </section>
+
+      <div class="album py-5 bg-light">
+        <div class="container">
+
+          <div class="row">
+            <div class="col-md-4">
+              <a href="{% url 'property' 'house' %}">
+              <div class="card mb-4 box-shadow">
+                <img class="card-img-top" src="{% static 'index/img/house.jpeg' %}" alt="Card image cap">
+                <div class="card-body">
+                  <p class="card-text">Buy a house! Get rid of high rents, and get comfort for you and your family.</p>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <small class="text-muted">House</small>
+                  </div>
+                </div>
+              </div>
+                </a>
+            </div>
+
+
+            <div class="col-md-4">
+              <a href="{% url 'property' 'apartment' %}">
+              <div class="card mb-4 box-shadow">
+                <img class="card-img-top" src="{% static 'index/img/apartment.jpeg' %}" alt="Card image cap">
+                <div class="card-body">
+                  <p class="card-text">An apartment is perfect for a small household, beautiful, practical, and perfect.</p>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <small class="text-muted">Apartment</small>
+                  </div>
+                </div>
+              </div>
+                </a>
+            </div>
+
+
+            <div class="col-md-4">
+              <a href="{% url 'property' 'mansion' %}">
+              <div class="card mb-4 box-shadow">
+                <img class="card-img-top" src="{% static 'index/img/mansion.jpeg' %}" alt="Card image cap">
+                <div class="card-body">
+                  <p class="card-text">Perfect mansions and private islands for you who just want to enjoy life.</p>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <small class="text-muted">Mansion</small>
+                  </div>
+                </div>
+              </div>
+                </a>
+            </div>
+    </main>
+  </div>
+
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
+    <script src="../../assets/js/vendor/popper.min.js"></script>
+    <script src="../../dist/js/bootstrap.min.js"></script>
+    <script src="../../assets/js/vendor/holder.min.js"></script>
+
+  </body>
+</html>
+
+
